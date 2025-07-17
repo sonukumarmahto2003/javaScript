@@ -439,9 +439,41 @@ dance();   */
 
 //------------------------------------
 // function expression
-
+/*
 let fnc = function(){
     console.log("hey")
 }
 
-fnc();  
+fnc();   */
+
+// Fat arrow function
+/*
+let fnc = () => {
+    console.log("hey");
+}
+
+fnc(); */
+
+//----------------------------
+/*
+function dance(v1){
+    console.log(`${v1} naach raha hai`);
+}
+
+dance("ghoda");
+dance("hirad");
+dance("cheel");
+dance("lakadbaggha");
+dance("horse");  */
+
+//--------------------------------
+// parameters vs arguments
+/*
+function add(v1, v2){
+    console.log(v1 + v2);
+}
+
+add(1, 2);
+add(11, 22);
+add(111, 222);  */
+
