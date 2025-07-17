@@ -362,8 +362,86 @@ for(let i = 1; i <= n; i++){
 
 // Q:-9:- Count how many numbers between 1 to 100 are divisible by both 3 and 5.
 
+/*
 for(let i = 1; i <= 100; i++){
     if(i % 3 === 0 && i % 5 === 0){
         console.log(i);
     }
+}  */
+
+
+
+// Q:-1:- Stop at first multiple of 7
+
+// write a loop from 1 to 100 that:
+// . Prints each number 
+// . Stops completely when it finds the first number divisible by 7
+
+/*
+for(let i=1; i<=100; i++){
+    console.log(i)
+    if(i%7 === 0){
+        break;
+    }
+}  */
+
+// Q:-2:- Skip Multiples of 3
+// Write a loop from 1 to 20 that:
+// . Skips numbers divisible by 3
+// . Print all others
+
+/*
+for(let i=1; i<=20; i++){
+    if(i%3 === 0){
+        continue;
+    }
+    console.log(i);
+}  */
+
+// Q:-3:- Print first 5 odd numbers only
+
+// Write a loop from 1 to 100 that:
+// . Prints only 5 odd numbers
+// . then stops the loop
+
+/*
+
+let count = 0;
+for(let i=1; i<101; i++){
+    
+    if(i%2 === 1){
+        count++;
+        console.log(i);
+    }
+
+    if(count === 5){
+        break;
+    }
+    
+}  */
+
+//----------------------------------------
+// Function------------------
+// function declarations
+/*
+function dance(){
+    console.log("dance");
+    console.log("dance");
+    console.log("dance");
+    console.log("dance");
+    console.log("dance");
+    console.log("dance");
 }
+
+dance();
+dance();
+dance();   */
+
+//------------------------------------
+// function expression
+
+let fnc = function(){
+    console.log("hey")
+}
+
+fnc();  
