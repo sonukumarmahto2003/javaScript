@@ -475,5 +475,232 @@ function add(v1, v2){
 
 add(1, 2);
 add(11, 22);
-add(111, 222);  */
+add(111, 222);  
+*/
 
+//----------------------------------------------
+
+// Default parameter ------------------------
+/*
+function add(v1 = 0, v2 = 1){
+    console.log(v1, v2);
+}
+
+add();  */
+
+//
+
+// Rest parameter --------------------------------
+// jab arguments kai saare ho to humein utne hi parameter banaane padege, issey bachne ke liye, hum rest ka use karte hai ... agar ... function ke parameter space main lage to wo rest operator hai
+// and agar wo arrays and objects main lage to wo spread operator 
+
+/*
+function abcd(...val){
+    console.log(val);
+}
+
+abcd(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);  */
+
+// ------------------------------------
+/*
+function abcd(a, b, c, ...val){
+    console.log(a, b, c, val);
+}
+
+abcd(1, 2, 3, 4, 5, 6)   */
+
+//--return matlab jaha se aaye ho wahi daal denge
+/*
+function abcd(){
+    return 12;
+}
+
+let val = abcd();
+console.log(val)  */
+
+//------------------------------
+/*
+function abcd(v){
+    return 12 + v;
+}
+
+let val = abcd(23);
+console.log(val); */
+
+// First class function -> functions ko values ki tarah treat kar sakte hai
+
+/*
+let abcd = 12; */
+/*
+let abcd = function(){
+
+}  */
+
+
+/*
+function abcd(val){
+    val();
+}
+
+abcd(function () {
+    console.log("hey");
+});   */
+
+
+// Higher order function -> hof wo function hota hai jo ki return kare function ya fir accept kare ek function apne parameter mein
+
+
+/*
+function abcd(val){
+
+}
+
+abcd(function(){
+    
+})  */
+
+
+
+/*
+function abcd(){
+    return function () {
+        console.log("heyehye");
+    };
+}
+
+abcd()();  */
+
+
+
+//------------ pure vs impure functions ----------
+
+// aisa function jo ki baahar ki value ko naa badle wo hai pure function
+
+/*
+let a = 12;
+
+function abcd(){    //  pure function
+    console.log("hey")
+} 
+
+function hui(){     //   impure function
+    a++;
+    console.log(a)
+}
+
+hui()
+*/
+
+// aisa function jo baahar ki value ko badal de wo hai impure functions
+
+
+///------------------------closures ------------>
+
+// closures -> ek function jo return kare ek aur function aur return hone waala function humesha use  karega parent function ka koi variable
+
+/*
+function abcd(){
+    let a = 12;
+    return function(){
+        console.log(a);
+    }
+}
+
+abcd()()  */
+
+//--------Lexical scoping -------------------->
+/*
+function abcd(){
+    let a = 12;
+    function defg(){
+        let b = 13;
+        function ghij(){
+            let c = 14;
+        }
+    }
+}   */
+
+//--IIFE (Immediately Invoked Function Expressions) --->
+
+
+/*
+(function(){
+    console.log("Sonu");
+})();  */
+
+
+
+//--------- Hoisting -------------------->
+
+/*
+console.log(x); // undefined
+var x = 5;  */
+
+
+/*
+abcd();
+
+function abcd(){
+    console.log("hey");
+}  */
+
+
+// Q:-1:- What's the difference between function declaration and expression in terms of hoisting ?
+
+// function declaration ->
+
+
+/*
+
+abcd()
+
+function abcd(){
+   console.log("sonu")
+}    
+
+*/
+
+// function expression ->
+
+// function expression error de deta hai
+
+/*  
+
+abcd()
+
+let abcd = function(){
+    console.log("sonu")
+}   */
+
+
+//Q:-2:- log kya hoga
+
+/*
+greet();
+
+function greet(){
+    console.log("Hello");
+}  */
+
+
+//Q:-3:- Function convert in fat arrow function
+/*
+function multiply(a, b){
+    return a * b;
+} */
+
+/*
+let multiply = (a, b) => {
+    return a * b;
+};
+
+multiply()  */
+
+//Q:-4:- Identify in parameter and argument
+
+/*
+function welcome(name) {
+    console.log(name);
+}
+
+welcome("sonu");  */
