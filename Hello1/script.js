@@ -704,3 +704,869 @@ function welcome(name) {
 }
 
 welcome("sonu");  */
+
+
+// Q:-1:- What's the difference between function declaration and expression in terms of hoisting ?
+
+
+/*
+
+abcd()      
+
+function abcd(){      // function declaration hoisting
+    console.log("sonu");
+}   */
+
+
+/*
+abcd()
+
+let abcd = function(){  // function statement hoisting
+    console.log("sonu")
+}
+*/
+
+// Q:-2:- Log kya hoga
+
+/*
+
+greet();
+
+function greet(){
+    console.log('Hello!');
+}  
+
+*/
+
+// Q:-3:- Function convert in fat arrow function
+/*
+function multiply(a, b){
+    return a * b;
+}
+*/
+
+
+/*
+
+let multiply = (a, b) => {
+    console.log("sonu")
+    return a * b;
+}
+
+multiply()
+
+*/
+
+// Q:-4:- Identify in parameter and argument
+
+/*
+
+function welcome(name){
+    console.log(name);
+}
+
+welcome("Sonu");
+
+*/
+
+
+// Q:-5:- Kitne perameter hai or kitne argument hai 
+/*
+function demo(a, b, c) {   // three perameter hai
+
+}
+
+demo(1, 2);     // two argument hai
+
+*/
+
+// Q:-6:- predict output
+
+/*
+function sayHi(name = "Guest") {
+    console.log("Hi", name);
+}
+
+sayHi();    */
+
+// Q:-7:- What does the ... operator mean in parameters ?
+/*
+function abcd(...val){
+    console.log(val);
+}
+
+abcd(1,2,3,4,5,6);  */
+
+// Q:-8:- Use rest parameter to accept any number of scores and return the total
+
+
+/*
+
+function getScore(...scores) {
+    console.log(scores)
+}
+
+getScore(10, 12, 14, 18);  */
+
+/*
+function getScore(...scores) {
+    let total = 0;
+    scores.forEach(function (val) {
+        total = total + val;
+    });
+    return total;
+}
+
+console.log(getScore(10, 12, 14, 18));  */
+
+// Q:-9:- fixce the function using  early return 
+/*
+function checkAge(age) {
+    if (age < 18) {
+        console.log("Too young");
+    } else {
+        console.log("Allowed");
+    }
+}
+*/
+
+/*
+function checkAge(age) {
+    if (age < 18)  return "Too young";
+    return "Allowed";
+}
+
+console.log(checkAge(12));  */
+
+
+
+// Q:- 10:- Return in the value of function
+
+
+/*
+function f() {
+    return;
+}
+
+console.log(f());  */
+
+// Q:- 11:- What does it mean when we say "functions are first-class citizens"?
+
+
+// Q:-12:- Can you assign a function to a variable and then call it ? Show how
+
+/*
+let a = function(){
+
+}
+
+a();  */
+
+
+// Q:-13:- Pass a function into another function and execute it inside.
+
+/*
+
+function abcd(val) {
+    val();
+}
+
+abcd(function () {
+    console.log("hey");
+});   */
+
+
+// Q:-14:- What is a higher-order function?
+
+/*
+
+function abcd(){
+    return function(){
+        console.log("return")
+    };
+}
+
+abcd()()    */
+
+/*
+function abcd(val){
+    val();
+}
+
+abcd(function(){
+    console.log("accept")
+})    */
+
+
+// Q:-15:- Identify in Higher order function
+
+/*
+[1, 2, 3].map(function (x) {
+    return x * 2;
+});  */
+
+// Q:-16:- Piyor and Inpiyor function 
+
+/*
+let total = 0;      // Inpiyor function
+function addToTotal(num) {
+    total += num;
+}  */ 
+
+
+/*
+function abcd(){
+    console.log("Piyor function");
+}
+
+abcd();   */
+
+
+// Q:-17:- Convert the above function into a pure function
+
+
+/*
+let total = 0;
+
+function addToTotal(num) {
+    let newtotal = total;
+    newtotal += num;
+}   */
+
+
+// Q:-18:- What is a closure? When is it created?
+
+/*
+function abcd() {
+    let val = 0;
+    return function () {
+        console.log(val);
+    };
+}  */
+
+// Q:-19:- kya log hoga ?
+
+/*
+function outer() {
+    let count = 0;
+    return function () {
+        count++;
+        console.log(count);
+    };
+}
+
+const counter = outer();
+counter();
+counter();   */
+
+// Q:-20:- Convert this normal function into an IIFE
+
+/*
+(function init() {
+    console.log("Initialized");
+})();
+*/
+
+// Q:-21:- What is the use of IIFE? Name one real-world use case.
+
+/*
+let shery = (function () {
+    let score = 0;
+    return {
+        getScore: function () {
+            console.log(score);
+        },
+        setScore: function (val) {
+            score = val;
+        },
+    };
+})();    */
+
+// Q:-22:- What will be the output here and why?
+
+/*
+greet();
+
+var greet = function () {
+    console.log("Hi");
+};  */
+
+// Q:-23:- What will be the output here and why?
+
+/*
+greet();
+
+function greet() {
+    console.log("Hi!");
+}  */
+
+
+
+// Q:-24:- Write a BMI calculator   
+
+/*
+function bmi(weight, height) {
+    return weight / (height * height);
+}
+
+console.log(bmi(69, 1.7).toFixed(2));   */
+
+// Q:-25:- Create a reusable discount calculator (HOF)
+
+/*
+function discountCalculator(discount) {
+    return function (price) {
+        return price - price * (discount / 100);
+    };
+}
+
+let discounter = discountCalculator(10);
+console.log(discounter(200));  */
+
+
+
+/*
+
+function discountCalculator(discount) {
+    return function (price) {
+        return price - price * (discount / 100);
+    };
+}
+
+let ten = discountCalculator(10);
+let twenty = discountCalculator(20);
+
+console.log(ten(1200));
+console.log(twenty(1200));    */
+
+
+// Q:-26:- Build a counter using Closure
+
+
+/*
+function counter() {
+    let count = 0;
+    return function () {
+        count++;
+        return count;
+    };
+}
+
+let c = counter();
+console.log(c());
+console.log(c());
+console.log(c());
+console.log(c());
+
+let d = counter();
+console.log(d());
+console.log(c());  */
+
+// Q:-27:- Create a pure function to transform a value 
+
+/*
+function double(val) {
+    return val * 2;
+}
+
+console.log(double(15));  */
+
+// Q:-28:- Use IIFE to isolate variables
+
+/*
+
+(function () {
+    const password = "secret password";
+    console.log(password);
+})();
+
+console.log(password);   */
+
+
+
+//----------------------Arrays---------------->
+
+/*
+Array-> Ek variable me ek se jyada elements(values) store kar sakte hai   */
+
+// ek se jyada elements ke liye hai
+
+/*
+let marks = [10, 40, 52, 37, 92];
+marks[3] = 2;
+console.log(marks)   */
+
+
+
+// Array Methods:-> push, pop, shift, unshift, splice, slice, reverse, sort, map, filter, reduce, find, some, every(intro level)
+
+// push-------------->
+
+/*
+let arr = [1, 2, 3, 4, 5];
+arr.push(7000);
+console.log(arr);  */
+
+// pop----------------->
+
+/*
+let arr = [1, 2, 3, 4, 5];
+arr.pop();
+console.log(arr);  */
+
+// shift----------------->
+
+/*
+let arr = [1, 2, 3, 4, 5];
+arr.shift();
+console.log(arr)  */
+
+// unshift----------------->
+
+/*
+let arr = [1, 2, 3, 4, 5];
+arr.unshift("add");
+console.log(arr)
+*/
+
+// splice------------------->
+
+/*
+let arr = [1, 2, 3, 4, 5];
+arr.splice(2,2);
+console.log(arr) */
+
+// slice--------------------->
+
+/*
+let arr = [1, 2, 3, 4, 5];
+let newarr = arr.slice(0, 4);
+
+console.log(newarr);
+console.log(arr);  */
+
+// reverse-------------------->
+
+/*
+let arr = [1, 2, 3, 4, 5];
+arr.reverse();
+console.log(arr);  */
+
+// sort------------------------>
+
+/*
+let arr = [11, 62, 3, 4, 25];
+arr.sort(function (a, b) {
+    return a-b;
+})
+
+console.log(arr);  */
+
+
+// forEach---------------------->
+
+/*
+let arr = [11, 62, 3, 4, 25];
+
+arr.forEach(function (val) {
+    console.log(val);
+});  */
+
+
+// map---------------------------->
+
+// map sirf tab youse karna hai jab aapko ek naya array banana hai pichhle array ke data ke basis par
+
+// map dikhte hi saath man mein ek blank array bana liya karo
+
+// jab bhi aapko aisa koi case dikh jaaye jaha par ek array se naya array banega and wo naya array kuchh values ko rakhega tab map lagega
+
+/*
+let arr = [11, 62, 3, 4, 25];
+
+let newarr = arr.map(function(val){
+    return 12;
+})
+
+console.log(newarr);  */
+
+// filter---------------------------->
+
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+let newarr = arr.filter(function (val) {
+    if(val > 4) return true;
+})
+
+
+console.log(newarr);  */
+
+// reduce------------------------------->
+
+// Ek array se ek value banana
+
+/*
+let arr = [1, 2, 3, 4, 5, 6];
+
+let ans = arr.reduce(function (accumulator, val) {
+    return accumulator + val;
+}, 0);
+
+console.log(ans);  */
+
+// find------------------------------------>
+
+/*
+let arr = [1, 2, 3, 1, 4, 5, 6];
+
+let va = arr.find(function (val) {
+    return val === 1;
+})
+
+console.log(va);   */
+
+
+/*
+let arr = [
+    { id: 1, key: 1},
+    { id: 2, key: 2},
+    { id: 3, key: 1},
+];
+
+let va = arr.find(function (val) {
+    return val.key === 1;
+});
+
+console.log(va);  */
+
+// some-------------------------------------->
+
+/*
+let arr = [10, 30, 32, 90];
+
+let any = arr.some(function (val) {
+    return val > 85;
+});
+
+console.log(any);  */
+
+
+// every--------------------------------------->
+
+/*
+let arr = [10, 30, 32, 90];
+
+let eve = arr.every(function (val) {
+    return val > 5;
+})
+
+console.log(eve);  */
+
+//---------------------------------------------
+
+// Destructuring, spread operator ------------->
+
+// Destructuring--------------------->
+
+/*
+let arr = [1, 2, 3, 4, 5];
+
+let [a, b, , c] = arr;
+
+console.log([a, b, c]);
+console.log(a, b, c);  */
+
+// spread operator----------------------------->
+
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let arr2 = [...arr];
+arr2.pop();
+
+console.log(arr);
+console.log(arr2);  */
+
+
+// Q:-1:- Create an array with 3 fruits and print the second fruit
+
+/*
+let fruit = ["apple", "guava", "banana"];
+
+console.log(fruit[1]) */
+
+/*
+let fruit = ["apple", "guava", "banana"];
+let [f, s, t] = fruit;
+console.log(s);  */
+
+// Q:-2:- Add "Mango" at the end and "Pineapple" at the beginning of this array
+
+/*
+
+let fruits = ["Apple", "Banana"];
+
+fruits.push("Mango");
+fruits.unshift("Pineapple");
+
+console.log(fruits);  */
+
+// Q:-3:- Replace "Banana" with "Kiwi" in the array above
+
+/*
+let fruits = ["Apple", "Banana"];
+
+fruits.pop();
+fruits.push("Kiwi");
+
+console.log(fruits);  */
+
+// Q:-4:- What's the difference between .push() and .unshift()
+
+/*
+let arr = [1, 2, 3, 4];
+arr.push("9");
+arr.unshift("6");
+console.log(arr); */
+
+// Q:-5:- Remove the last item from this array using a method
+
+/*
+let numbers = [1, 2, 3, 4];
+numbers.pop();
+console.log(numbers); */
+
+// Q:-6:- Insert "Red" and "Blue" at index 1 in this array
+
+/*
+let colors = ["Green", "Yellow"];
+colors.splice(1, 0, "Red", "Blue");
+console.log(colors);  */
+
+// Q:-7:- Extract only the middle 3 elements from this array 
+
+/*
+let items = [1, 2, 3, 4, 5, 6];
+let newarr = items.slice(2, 5);
+console.log(newarr);   */
+
+// Q:-8:- Sort this array alphabetically and then reverse it
+
+/*
+let names = ["Zara", "Arjun", "Mira", "Bhavya"];
+names.sort().reverse();
+console.log(names);   */
+
+// Q:-9:- Use .map() to square each number
+
+/*
+let arr = [1, 2, 3, 4];
+let newarr = arr.map(function (val) {
+    return val * val;
+});
+
+console.log(newarr);    */
+
+// Q:-10:-Use .filter() to keep numbers greater than 10
+
+/*
+let arr = [5, 12, 8, 20, 3];
+let newarr = arr.filter((val) => {
+    return val > 10;
+});
+
+console.log(newarr);   */
+
+
+// Q:-11:- Use .reduce() to find the sum of this array
+
+/*
+let arr = [10, 20, 30];
+
+let sum = arr.reduce(function (acc, val) {
+    return acc + val;
+}, 0);
+
+console.log(sum);   */
+
+// Q:-12:- Use .find() to get the first number less than 10
+
+/*
+let arr = [12, 15, 3, 8, 20];
+
+let ans = arr.find(function (val) {
+    return val < 10;
+});
+
+console.log(ans); */
+
+
+// Q:-13:- Use .some() to check if any student has scored below 35
+
+/*
+let arr = [45, 60, 28, 90];
+let ans = arr.some(function (val) {
+    return val < 35;
+});
+
+console.log(ans);  */
+
+
+// Q:-14:- Use .every() to check if all numbers are even
+
+/*
+let arr = [2, 4, 6, 8, 10];
+
+let ans = arr.every(function (val) {
+    return val % 2 === 0;
+})
+
+console.log(ans);   */
+
+// Q:-15:- Destructure this array to get firstName and lastName
+
+/*
+let fullName = ["Harsh", "Sharma"];
+let [firstName, lastName] = fullName;
+
+console.log(firstName);
+console.log(lastName);  */
+
+// Q:-16:- Merge two arrays using spread operator
+
+/*
+let a = [1, 2];
+let b = [3, 4];
+
+let c = [...a, ...b];
+
+console.log(c);  */
+
+
+// Q:-17:- Add "India" to the start of this array using spread 
+
+/*
+let countries = ["USA", "UK"];
+countries = ["India", ...countries];
+
+console.log(countries);  */
+
+// Q:-18:- Clone this array properly (not by reference)
+
+/*
+let arr = [1, 2, 3];
+let arr2 = [...arr];
+
+console.log(arr2);  */
+
+
+
+// ------------Object-------------------->
+
+// ek bande ke bare me bata karte hai to object banate hai
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    khaana: "daal chaawal",
+};
+
+console.log(obj);
+console.log(obj.age);  */
+
+// key-value structure ----------------------->
+
+/*
+let obj = {
+    name: "harsh"
+}  */
+
+// Dot vs bracket notation ------------------->
+
+/*
+obj.name  */
+
+/*
+obj['name']  */
+
+// Nesting and deep access---------------------->
+
+/*
+const user = {
+    name: "Harsh",
+    address: {
+        city: "Bhopal",
+        pin: 462001,
+        location: {
+            lat: 23.2,
+            lng: 77.4,
+        },
+    },
+};  
+
+
+console.log(user);
+console.log(user.address.location.lng);   */
+
+
+// Object destructuring --------------------->
+
+/*
+const user = {
+    name: "Harsh",
+    address: {
+        city: "Bhopal",
+        pin: 462001,
+        location: {
+            lat: 23.2,
+            lng: 77.4,
+        },
+    },
+};  
+
+let {lat, lng} = user.address.location;
+
+console.log(lat);
+console.log(lng);  */
+
+
+// Looping :- for-in, Object.keys, Object.entries---------------------------------->
+
+// for-in -------------------------------->
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+};
+
+for(let key in obj) {
+    console.log(key, obj[key]);
+}   */
+
+
+// Object.keys ------------------------------>
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+};
+
+console.log(Object.keys(obj));   */
+
+// Object.entries ----------------------------->
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+};
+
+console.log(Object.entries(obj));    */
+
+//
