@@ -1569,4 +1569,96 @@ let obj = {
 
 console.log(Object.entries(obj));    */
 
-//
+
+// Copying objects:- spread, Object.assign, deep clone ---------------------------------------->
+
+// spread ------------------------------------>
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+};
+
+let obj2 = {...obj};
+console.log(obj2);
+console.log(obj);   */
+
+// Object.assign ------------------------------>
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+};
+
+let obj2 = Object.assign({ price: Infinity }, obj);
+console.log(obj2);  */
+
+// deep clone --------------------------------->
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+    address: {
+        city: "bhopal",
+    },
+};
+
+let obj2 = JSON.parse(JSON.stringify(obj));
+obj2.address.city = "Indore";
+console.log(obj2);
+console.log(obj);   */
+
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+    address: {
+        city: "bhopal",
+    },
+};
+
+let obj2 = { ...obj };
+obj2.address.city = "Indore";
+
+console.log(obj2);
+console.log(obj);  */
+
+
+// Optional chaining ------------------------>
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+    addresses: {
+        city: "bhopal",
+    },
+};
+
+console.log(obj?.address?.city);  */
+
+// computed properties ----------------------->
+
+/*
+let role = "admin";
+
+let obj = {
+    name: "harsh",
+    age: 26,
+    email: "test@test.com",
+    addresses: {
+        city: "bhopal",
+    },
+    [role]: "harsh",
+};
+
+console.log(obj);   */

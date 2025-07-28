@@ -22,7 +22,7 @@ html,body{
 }   */
 
 
-
+/*
 #box{
     width: 500px;
     height: 500px;
@@ -33,4 +33,24 @@ html,body{
     height: 50vh;
     width: 50vw;
     background-color: royalblue;
-}    
+}    */
+
+/*
+h1{
+    font-size: 6vw;
+}   */
+
+/*
+h1{
+    font-size: 6vh;
+}   */
+
+/*
+h1{
+    font-size: 7vmax;
+}   */
+
+/*
+h1{
+   font-size: 7vmin;
+}    */
