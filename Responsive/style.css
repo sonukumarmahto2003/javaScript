@@ -74,7 +74,7 @@ h3{
     font-size: 1.5em;
 }  */
 
-
+/*
 #parent{
     background-color: beige;
     width: 40%;
@@ -91,4 +91,13 @@ h2{
 
 h3{
     font-size: 1.5rem;
+}   */
+
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: royalblue;
+    position: absolute;
+    left: 50%;
 }
