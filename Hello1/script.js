@@ -1544,7 +1544,7 @@ let obj = {
 
 for(let key in obj) {
     console.log(key, obj[key]);
-}   */
+}    */
 
 
 // Object.keys ------------------------------>
@@ -1662,3 +1662,173 @@ let obj = {
 };
 
 console.log(obj);   */
+
+
+// Q:-1:- Create an object for a student with name, age, and isEnrolled
+
+/*
+let obj = {
+    name: "harsh",
+    age: 26,
+    isEnrolled: true,
+}
+
+console.log(obj);  */
+
+// Q:-2:- Can an object key be a number or boolean? Try this
+
+/*
+const obj = {
+    true: "yes",
+    42: "answer",
+};
+
+console.log(obj[true]);
+console.log(obj);    */
+
+// Q:-3:- Access the value of "first-name" from this object
+
+/*
+const user = {
+    "first-name": "Harsh",
+};
+
+console.log(user["first-name"])    */
+
+
+// Q:-4:- Given a dynamic key let key = "age", how will you access user[key]
+
+/*
+let key = "age";
+
+const user = {
+    age: 26,
+};
+
+console.log(user[key]);   */
+
+// Q:-5:- From the object below, print the latitude
+
+/*
+const locations = {
+    city: "Bhopal",
+    coordinats: {
+        lat: 23.2,
+        lng: 77.4,
+    },
+};
+
+console.log(locations.coordinats.lat);   */
+
+// Q:-6:- What will happen if coordinates is missing? How can you prevent errors?
+
+/*
+const locations = {
+    city: "Bhopal",
+    coordinate: {
+        lat: 23.2,
+        lng: 77.4,
+    },
+};
+
+console.log(locations?.coordinates?.lat);  */
+
+// Q:-7:- Destructure the city and lat from the location object above
+
+/*
+const locations = {
+    city: "Bhopal",
+    coordinate: {
+        lat: 23.2,
+        lng: 77.4,
+    },
+};
+
+let { city } = locations;
+let { lat } = locations.coordinate;
+
+console.log(city);
+console.log(lat);  */
+
+// Q:-8:- Destructure the key "first-name" as a variable called firstName
+
+/*
+const user = {
+    "first-name": "Harsh",
+};
+
+let { "first-name": firstName } = user;
+console.log(firstName);   */
+
+
+// Q:-9:- Use for-in to log all keys in this object
+
+/*
+let course = {
+    title: "JavaScript",
+    duration: "4 weeks",
+};
+
+for(let key in course){
+    console.log(key, course[key]);
+}    */
+
+// Q:-10:- Use Object.entries() to print all key-value pairs as 
+
+/*
+const course = {
+    title: "JavaScript",
+    duration: "4 weeks",
+};
+
+Object.entries(course).forEach(function (val) {
+    console.log(val[0] + " : " + val[1]);
+})  */
+
+
+// Q:-11:- Copy this Object in using spread operator
+
+/*
+const original = { a: 1, b: 2 };
+const copy = { ...original };
+
+console.log(copy);   */
+
+// Q:-12:- What is problem this
+
+/*
+const obj1 = { info: { score: 80 } };
+const clone = { ...obj1 };
+clone.info.score = 100;
+console.log(obj1.info.score);  // ?  */
+
+
+// Q:-13:- Deep clone the obj1 safely
+
+/*
+const obj1 = { info: { score: 80 } };
+let newobj = JSON.parse(JSON.stringify(obj1));
+newobj.info.score = 100;
+
+console.log(newobj);
+console.log(obj1);    */
+
+
+// Q:-14:- Rewrite this safely using optional chaining
+
+/*
+const person = {};
+console.log(person?.profile?.name);   */
+
+// Q:-15:- Use a variable to dynamically assign a property
+
+/*
+const key = "role";
+let obj = {
+    name: "harsh",
+    [key]: "admin",
+};
+
+console.log(obj);  */
+
+
