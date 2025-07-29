@@ -54,3 +54,41 @@ h1{
 h1{
    font-size: 7vmin;
 }    */
+
+/*
+#parent{
+    background-color: beige;
+    width: 40%;
+    font-size: 40px;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h2{
+    font-size: 1em;
+}
+
+h3{
+    font-size: 1.5em;
+}  */
+
+
+#parent{
+    background-color: beige;
+    width: 40%;
+    font-size: 40px;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
