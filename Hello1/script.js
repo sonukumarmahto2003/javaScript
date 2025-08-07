@@ -1832,3 +1832,65 @@ let obj = {
 console.log(obj);  */
 
 
+
+//--------------DOM Manipulation ---------------->
+
+// --html se element select karna
+// --text badalna
+// --html badalna
+// --css badalna
+// --attribute
+// --event listeners
+
+
+// ------------------------------------->
+
+
+/*
+let abcd = document.querySelector("h1");
+console.log(abcd);   */
+
+/*
+let abcd = document.querySelectorAll("h1");
+console.log(abcd);  */
+
+/*
+let h1 = document.querySelector("h1");
+console.dir(h1);   */
+
+/*
+let h1 = document.querySelector("h1");
+h1.innerHTML = "<i>hey</i>";
+console.dir(h1);    */
+
+/*
+let h1 = document.querySelector("h1");
+h1.innerHTML = "hello";
+console.dir(h1);    */
+
+
+//------Attribute manipulation------------->
+
+// getAttribute, setAttribute, remmoveAttribute-->
+
+
+/*
+let img = document.querySelector("img");
+img.setAttribute("src", "https://images.unsplash.com/photo-1566438480900-0609be27a4be?q=80&w=1988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")   */
+
+/*
+let a = document.querySelector("a");
+console.log(a.getAttribute("href"));  */
+
+/*
+let a = document.querySelector("a");
+console.log(a.removeAttribute("href"));   */
+
+//------Dynamic DOM manipulation------------->
+
+// createElement, appendChild, removeChild, prepend--->
+
+/*
+let h1 = document.createElement("h1");
+h1.textContent = "ghar par jaao khana khaao";
+document.body.appendChild(h1);   */
