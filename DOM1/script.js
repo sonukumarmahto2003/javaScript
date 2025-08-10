@@ -75,8 +75,37 @@ btn.addEventListener('click', function(){
         console.log("Again Cliocked ");
         flag = 0;
     }
-})       */
+})        */
+
+
+/*
+let h1 = document.querySelectorAll('h1');
+console.log(h1);
+
+h1.forEach(function(e) {
+    console.log(e);
+})   */
+
+
+/*
+let box = document.getElementById('box');
+console.log(box);   */
+
+
+/*
+let box = document.getElementsByClassName('box');
+console.log(box);   */
+
+/*
+let h1 = document.querySelector('h1');
+h1.innerHTML = "bye";  */
+
+/*
+let box = document.querySelector('#box');
+box.innerHTML = "<h1>wwww</h1>"   */
 
 
 
+let box = document.querySelector('#box');
+box.textContent = "<h1>wwww</h1>"  
 
