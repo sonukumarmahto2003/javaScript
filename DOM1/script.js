@@ -105,7 +105,78 @@ let box = document.querySelector('#box');
 box.innerHTML = "<h1>wwww</h1>"   */
 
 
-
+/*
 let box = document.querySelector('#box');
-box.textContent = "<h1>wwww</h1>"  
+box.textContent = "<h1>wwww</h1>"   */
 
+
+
+// 5. setTimeout and setInterval and clearInterval ----->
+
+
+/*
+setTimeout(function() {
+    console.log("Hello");
+},4000);  */
+
+
+/*
+setInterval(function() {
+    console.log("Hello"); 
+},1000);   */
+
+
+
+/*
+let getTime = setInterval(curTime, 1000);
+
+function curTime() {
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    document.getElementById('heads').innerHTML = time;
+    console.log(time);
+}   */
+
+
+
+/*
+let set = setInterval(function() {
+    console.log("Hello"); 
+},1000);  
+
+
+clearInterval(set);
+console.log(set);  */
+
+
+/*
+let getTime = setInterval(curTime, 1000);
+
+function curTime() {
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    document.getElementById('heads').innerHTML = time;
+    console.log(time);
+}  
+
+
+
+function stop () {
+    clearInterval(getTime);
+}
+
+stop();  */
+
+
+
+/*
+let a = document.createElement('h1');
+a.innerHTML = "hhhhhh"
+a.style.color = "red";  
+document.body.appendChild(a);  */
+
+
+/*
+const newDiv = document.createElement("div");
+newDiv.textContent = "Hello, I'm a new div!";
+document.body.appendChild(newDiv);  */
